@@ -12,9 +12,9 @@ public class Boundary extends ArrayList<Line>{
 	/**
 	 * type表示是属于inner还是outer
 	 */
-	String type;
+	public int type;
 	/**
 	 * typeId表示该边界的类型的typeId,也对应着idRole
 	 */
-	int typeId=AreaTree.genId();
+	public int id=AreaTree.genId();
 }

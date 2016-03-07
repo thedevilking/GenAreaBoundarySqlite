@@ -8,7 +8,7 @@ package wwtao.genareaboundarysqlite.areatree;
  */
 public class Point {
 
-	public int id;
+	public int id=AreaTree.genId();
 	public double longitude;
 	public double latitude;
 	

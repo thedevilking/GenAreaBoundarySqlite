@@ -1,5 +1,6 @@
 package wwtao.genareaboundarysqlite.areatree;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /** 
@@ -11,10 +12,32 @@ public class AreaNode {
 	/**
 	 * 本节点的数据
 	 */
-	List<Boundary> boundary;
+	public List<Boundary> boundarylist;
+	
+	public List<AreaNode> childrenlist;
 	
 	/**
 	 * 本节点的唯一id
 	 */
-	int id=AreaTree.genId();
+	public int id=AreaTree.genId();
+	
+	public AreaNode(){
+		boundarylist=new ArrayList<Boundary>();
+		childrenlist=new ArrayList<AreaNode>();
+	}
+	
+	/**
+	 * 添加边界
+	 * @param boundary
+	 */
+	public void addBoundary(Boundary boundary){
+		boundarylist.add(boundary);
+	}
+	
+	/**
+	 * 添加子层次区域
+	 */
+	public void addChild(AreaNode child){
+		childrenlist.add(child);
+	}
 }

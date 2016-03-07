@@ -12,6 +12,6 @@ public class Line extends ArrayList<Point>{
 	/**
 	 * 
 	 */
-	int id=AreaTree.genId();
+	public int id=AreaTree.genId();
 	
 }
